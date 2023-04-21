@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="left">
+            <img src="img/bgimg.avif" alt="some leaves with bugs on them" id="leafpic">
+            <div id="banner">
+                <img src="img/odin-lined.png" alt="a cartoony viking">
+                <h1>ODIN</h1>
+            </div>
+            <p>Photo by <a href="https://unsplash.com/@haliewestphoto">Halie West</a> on <a href="https://unsplash.com/">Unsplash</a></p>
+        </div>
+        <div id="right">
+            <div id="one">
+                <p>This is not a real online service! You know you need something like this in
+                    your life to help you realize your deepest dreams. Sign up <i>now</i> to get started.
+                </p>
+                <p>You <i>know</i> you want to.</p>
+            </div>
+            <div id="two">
+                <p>Let's do this!</p>
+                <form action="submit" method="post" id="signform">
+                        <div id="ifirst"><label for="firstname">FIRST NAME</label>
+                            <input type="text" name="firstname"></div>
+
+                        <div id="ilast"><label for="lastname">LAST NAME</label>
+                            <input type="text" name="lastname"></div>
+
+                        <div id="iemail"><label for="email">EMAIL</label>
+                            <input type="email" name="email"></div>
+
+                        <div id="iphone"><label for="phoneno">PHONE NUMBER</label>
+                            <input type="tel" name="phoneno"></div>
+
+                        <div id="ipass"><label for="pass">PASSWORD</label>
+                            <input type="password" name="pass">
+                            <span id="passerror"></span></div>
+                        
+                        <div id="icp"><label for="confpass">CONFIRM PASSWORD</label>
+                            <input type="password" name="confpass"></div>
+                </form>
+            </div>
+
+            <div id="three">
+                <input type="button" value="Create Account" form="signform">
+                <p>Already have an account? <a href="">Log in</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const pass = document.querySelector('input[name="pass"]');
+        const confpass = document.querySelector('input[name="confpass"]');
+        const passerror = document.querySelector('#passerror');
+
+        pass.addEventListener("change", () => {
+            if (pass.value === confpass.value) switcher(true);
+            else switcher(false);
+        })
+
+        function switcher(match) {
+            if (!match){
+                pass.classList.add("error");
+                confpass.classList.add("error")
+                passerror.textContent = "* passwords don't match" 
+            } else {
+                pass.classList.remove("error");
+                confpass.classList.remove("error");
+                passerror.textContent = "";
+            }
+        }
+    </script>
+</body>
+</html>

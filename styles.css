@@ -1,0 +1,200 @@
+@font-face {
+    font-family: "Norse";
+    src: url("Norse-Bold.otf");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+body {
+    background-color: rgb(36, 33, 30);
+}
+
+#wrapper {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+}
+
+#wrapper,#left,#wrapper,#leafpic {
+    height: 100%;
+}
+
+#left {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+#left p {
+    position: absolute;
+    margin: auto;
+    padding: 0;
+    bottom: 2%;
+    font-size: 1.8vh;
+    width:100%;
+    text-align: center;
+    color: rgba(255,255,255,0.7);
+}
+
+#left a {
+    color:inherit;
+}
+
+#banner {
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    width:100%;
+    height: 20%;
+    top: 20%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#banner h1 {
+    font-family: "Norse",sans-serif;
+    font-size: 5vw;
+    color: white;
+}
+
+
+#banner img {
+    height: 80%;
+    margin: 0;
+    padding: 0;
+}
+
+
+#leafpic {
+
+    min-width: 100%;
+}
+
+#right {
+    width: 65%;
+    background-color: rgb(245, 245, 245);
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+
+#one p, #two p {
+    font-weight: 700;
+    font-size: calc(6px + 1.5vh + 0.5vw);
+}
+
+#one > *, #two > *, #three > * {
+    margin-left: 5%;
+}
+
+#one {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+#one p {
+    width: 70%;
+}
+
+#one p:last-child {
+    margin-bottom: 5%;
+}
+
+
+#two {
+    background-color: white;
+    height: 30%;
+    box-shadow: 0px 3px 10px rgb(184, 184, 184);
+    
+}
+
+#two p {
+    margin-top: 2%;
+    margin-bottom: 2vh;
+    font-size: 2.5vh;
+    
+}
+
+#two form {
+    width: 80%;
+    height: 70%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+form div {
+    margin-bottom: 2.5vh;
+    width: 50%;
+    height: 5vh;
+    position: relative;
+}
+
+form label {
+    font-size: calc(4px + 1vh);
+    letter-spacing: 2px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+form input {
+    display: block;
+    width: 80%;
+    font-size: 1.75vh;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    padding-left: 0.2vw;
+    border: #E5E7EB solid 1px;
+    
+    
+}
+
+#two input:focus {
+    border: solid rgb(104, 104, 247) 0.25vh;
+    outline: none;
+    box-shadow: 0px 3px 5px rgb(180, 180, 180);
+}
+
+#two input:invalid, body #signform .error {
+    border: solid red 0.25vh;
+}
+
+#iemail:has(input[type="email"]:invalid)::after, #passerror {
+    
+    font-size: 1.5vh;
+    color: red;
+    content: "* invalid email";
+    position: absolute;
+}
+
+
+
+
+#three input[type="button"] {
+    background-color: #596D48;
+    color: white;
+    font-size: 100%;
+    padding: 1.5vh 3vw;
+    border: 0;
+    border-radius: 5px;
+    margin-top: 5vh;
+    box-shadow: 0 2px 10px rgb(207, 207, 207);
+    
+}
+
+
+#one,#three{
+    flex: 1;
+}
+
