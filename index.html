@@ -64,6 +64,11 @@
             else switcher(false);
         })
 
+        confpass.addEventListener("change", () => {
+            if (pass.value === confpass.value) switcher(true);
+            else switcher(false);
+        })
+
         function switcher(match) {
             if (!match){
                 pass.classList.add("error");
